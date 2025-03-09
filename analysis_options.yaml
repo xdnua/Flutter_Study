@@ -15,6 +15,7 @@ analyzer:
     avoid_print: ignore
     non_constant_identifier_names: ignore
     deprecated_member_use: ignore
+    no_leading_underscores_for_local_identifiers: ignore
 include: package:flutter_lints/flutter.yaml
 
 linter:

@@ -66,11 +66,14 @@ class MealDetailsScreen extends ConsumerWidget {
       body: ListView(
         padding: const EdgeInsets.symmetric(horizontal: 12),
         children: [
-          Image.network(
-            meal.imageUrl,
-            height: 300,
-            width: double.infinity,
-            fit: BoxFit.cover,
+          Hero(
+            tag: meal.id,
+            child: Image.network(
+              meal.imageUrl,
+              height: 300,
+              width: double.infinity,
+              fit: BoxFit.cover,
+            ),
           ),
           _buildSectionTitle(context, 'Ingredients'),
           ...meal.ingredients.map(
